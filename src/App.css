@@ -1,0 +1,207 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+/* src/App.css */
+
+.controls {
+  margin: 20px 0;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.controls input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
+
+.controls button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #218838;
+}
+
+.clue {
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid container for 4x4 fixed grid */
+/* Add this to your App.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 columns for 4x4 grid */
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.grid-item {
+  background-color: #2196F3;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  padding: 5px;
+}
+
+.grid-item.answered {
+  background-color: #4CAF50;
+}
+
+.grid-item.wrong {
+  background-color: #E53935;
+}
+.timer {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Leaderboard table styling */
+.leaderboard {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.leaderboard h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.leaderboard-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.leaderboard-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.leaderboard-table .highlight {
+  background-color: #ffeb3b !important;
+}
+
+.social {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.social a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #0077b5;
+}
+
+.donate {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.donate a {
+  text-decoration: none;
+  background-color: #ff813f;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.donate a:hover {
+  background-color: #e76a2c;
+}
+
+
+
+.social {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.share-button {
+  margin: 0 10px; /* Add space between icons */
+}
