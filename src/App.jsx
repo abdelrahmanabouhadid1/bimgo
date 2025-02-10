@@ -11,12 +11,18 @@ const terms = [
   },
   { term: "Clash Detection", clue: "Identifying design conflicts in a model." },
   { term: "COBie", clue: "Standard for asset data exchange." },
-  { term: "Revit", clue: "Popular BIM software by Autodesk." },
   {
-    term: "Navisworks",
-    clue: "Software for model coordination and clash detection.",
+    term: "BIM Execution Plan",
+    clue: "Strategic document for implementing BIM on a project.",
   },
-  { term: "Dynamo", clue: "Visual scripting tool for BIM automation." },
+  {
+    term: "Model Coordination",
+    clue: "Process of integrating different discipline models.",
+  },
+  {
+    term: "Information Management",
+    clue: "Organizing and controlling project data flow.",
+  },
   {
     term: "Model Federation",
     clue: "Combining multiple models into a single environment.",
@@ -26,6 +32,14 @@ const terms = [
   { term: "ISO 19650", clue: "International BIM standard." },
   { term: "4D BIM", clue: "Adds time scheduling to BIM models." },
   { term: "5D BIM", clue: "Integrates cost estimation with BIM models." },
+  {
+    term: "Asset Information Model",
+    clue: "Model containing data needed for operation phase.",
+  },
+  {
+    term: "Digital Twin",
+    clue: "Virtual replica of physical assets and processes.",
+  },
 ];
 
 // Firebase imports using the modular SDK
@@ -116,10 +130,14 @@ function App() {
     setHasGameStarted(true);
     setMessage("");
     setMyScoreKey(null);
+
+    // Ensure exactly 16 terms (4x4 grid)
     const shuffled = [...terms].sort(() => Math.random() - 0.5).slice(0, 16);
+
     setShuffledTerms(
       shuffled.map((termObj) => ({ ...termObj, answered: false, wrong: false }))
     );
+
     pickNewClue(shuffled);
     setTimeElapsed(0);
     setTimerActive(true);
@@ -190,7 +208,7 @@ function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>🎯 BIM Bingo Game 🎯</h1>
+        <h1>🎯 BIM Bingo Game [Bimgo] 🎯</h1>
         <p>Click the correct answer on the Bingo card based on the question!</p>
       </header>
 
@@ -305,11 +323,11 @@ function App() {
 
       <div className="donate">
         <a
-          href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
+          href="https://www.paypal.com/donate/?hosted_button_id=M9HD97TYSYPBJ"
           target="_blank"
           rel="noopener noreferrer"
         >
-          ☕ Buy Me a Coffee
+          Fuel BIM Learning 🚀
         </a>
       </div>
     </div>
